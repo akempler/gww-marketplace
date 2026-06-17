@@ -95,3 +95,35 @@ Reviews an RFP (PDF) and generates a prioritized, categorized list of clarifying
 > I identified 18 clarifying questions: 4 Critical, 9 High, 5 Medium.
 > The highest-risk areas are the undefined data migration scope (Section 4.1)
 > and the absence of any stated budget ceiling.
+
+#### rfp-proposal
+
+Drafts a full proposal response to an RFP. Accepts the RFP PDF plus optional reference documents (Q&A responses, amendments, past performance summaries, résumés). Produces a complete, requirement-traceable proposal draft in a Google Doc named `{client}-rfp-proposal-draft`.
+
+**Usage:**
+
+```
+/biz-dev:rfp-proposal <rfp.pdf> [reference-doc.pdf ...]
+```
+
+**What it produces:**
+- **Section A — Executive Summary** (250–350 words): opening that names the solution and leads with client value, not platitudes
+- **Section B — Understanding of Requirements**: paraphrased client objectives showing deep comprehension, folding in any Q&A responses
+- **Section C — Features**: synthesized list of required capabilities with RFP traceability references
+- **Section D — Technical Approach** (600–700 words, written for a state procurement audience): solution architecture, implementation methodology, integration & data, security & compliance, testing & QA
+- **Section E — Project Timeline**: milestone table derived from RFP dates
+- **Section F — Project Team & Key Personnel**: roles with qualifications drawn from any provided résumés
+- **Section G — Past Performance**: up to three relevant examples mapped to evaluation criteria
+- **Section H — Assumptions & Exceptions**: transparent disclosure of any gaps or deviations
+
+Also runs a **compliance check** — every SHALL/MUST/WILL requirement from the RFP is confirmed addressed or flagged as a gap before the document is created.
+
+**Example:**
+
+```
+/biz-dev:rfp-proposal acme-rfp.pdf acme-qa-responses.pdf
+```
+
+> Draft complete — **acme-corp-rfp-proposal-draft** [link].
+> All 23 stated requirements are addressed. Two assumptions were made and flagged in Section H.
+> The Past Performance section has placeholder entries — provide project details to complete.
