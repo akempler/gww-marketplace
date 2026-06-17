@@ -1,0 +1,20 @@
+{
+  "name": "gww-marketplace",
+  "description": "A fun plugin marketplace with creative writing skills for Claude Code",
+  "owner": {
+    "name": "Adam Kempler",
+    "email": "akempler@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "limerick-writer",
+      "source": "./plugins/limerick-writer",
+      "description": "Write custom limericks about a person given their name"
+    },
+    {
+      "name": "saying-of-the-day",
+      "source": "./plugins/saying-of-the-day",
+      "description": "Generate a pithy, original saying of the day"
+    }
+  ]
+}

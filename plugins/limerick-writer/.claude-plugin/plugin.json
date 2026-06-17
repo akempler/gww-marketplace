@@ -1,0 +1,5 @@
+{
+  "name": "limerick-writer",
+  "description": "Write custom limericks about a person given their name",
+  "version": "1.0.0"
+}
