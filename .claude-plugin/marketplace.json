@@ -15,6 +15,11 @@
       "name": "saying-of-the-day",
       "source": "./plugins/saying-of-the-day",
       "description": "Generate a pithy, original saying of the day"
+    },
+    {
+      "name": "biz-dev",
+      "source": "./plugins/biz-dev",
+      "description": "Business development skills for evaluating RFPs, drafting responses, and supporting the BD pipeline"
     }
   ]
 }
